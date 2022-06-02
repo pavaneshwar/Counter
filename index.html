@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+    <style>
+        body{
+            background-image: url('clock.jpg');
+            background-size: 100%;
+            
+        }
+        header{
+            background-color: black;
+            color: white;
+            width: 400px;
+            margin-left: 600px; 
+            margin-bottom: 200px;
+            
+            
+        }
+        h1{
+           margin-left: 100px;  
+        }
+        p{
+            font-size: 100px;
+            color: snow;
+            margin: 100px;
+            margin-left: 775px; 
+        }
+        .butn{
+            align-content:space-between;
+            margin-left: 300px;
+            
+        }
+        #dec{
+            margin:100px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            min-width: 150px;
+        }
+        #rst{
+            margin:100px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            min-width: 150px;
+        }
+        #inc{
+            margin:100px;
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            min-width: 150px;
+        }
+        button:hover{
+            opacity: 0.5;
+            
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div id='full'></div>
+    <header>
+        <h1>COUNTER</h1>
+    </header>
+    <div class="num">
+        <p id="no">0</p>
+    </div>
+    <div class="butn">
+        <button onclick="decr()" id='dec'>Decrease</button>
+        <button onclick="rstr()" id='rst'>Reset</button>
+        <button onclick="incr()" id='inc'>Increase</button>
+    </div>
+</body>
+<script>
+    var num=0;
+    const a= document.getElementById("no");
+    function incr(){
+        num=num+1;
+        a.innerHTML=num;
+    }
+    function decr(){
+        num=num-1;
+        a.innerHTML=num;
+    }
+    function rstr(){
+        num=0;
+        a.innerHTML=num;
+    }
+</script>
+</html>
